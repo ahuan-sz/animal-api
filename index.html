@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnimalApi</title>
+</head>
+<body>
+  <image id="imageSrc" />
+  <div id="text"></div>
+  <script src="./lib/animal-api.js"></script>
+  <script>
+    AnimalApi.getDog().then(function(animal) {
+      document.querySelector('#imageSrc').src = animal.imageSrc;
+      document.querySelector('#text').textContent = animal.text;
+    })
+  </script>
+</body>
+</html>
